@@ -4,19 +4,22 @@
       <TopBar />
     </el-header>
     <el-container class="main-container">
-      <Tour />
+      <Tour v-if="!isMobile"/>
       <el-aside width="auto">
-        <h5 class="heading-blog">
+        <h5 class="heading-blog desktop-only">
           My First Blog
         </h5>
         <SideBar />
-        <div class="upgrade-button">
+        <div class="upgrade-button desktop-only">
           <p class="free-account">FREE ACCOUNT</p>
           <el-button plain @click="$router.push('maintenance')">UPGRADE</el-button>
         </div>
       </el-aside>
-      <el-main>
+      <el-main class="desktop-only">
         <all-post-content />
+      </el-main>
+      <el-main class="mobile-only">
+        <mobile-content />
       </el-main>
     </el-container>
   </el-container>
@@ -27,13 +30,21 @@ import Tour from "@/components/Tour";
 import SideBar from "@/components/SideBar";
 import TopBar from "@/components/TopBar";
 import AllPostContent from "@/components/AllPostContent";
+import MobileContent from "../components/MobileContent";
 
+import { isMobile } from 'mobile-device-detect';
 export default {
   components: {
+    MobileContent,
     Tour,
     SideBar,
     TopBar,
     AllPostContent
+  },
+  data () {
+    return {
+      isMobile: isMobile ? true : false
+    }
   }
 };
 </script>

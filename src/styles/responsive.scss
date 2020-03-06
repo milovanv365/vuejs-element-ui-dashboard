@@ -1,0 +1,16 @@
+@import "setup/variables";
+@import "setup/mixins";
+@import "setup/vue-tour";
+@import "base/normalize";
+
+@include small-down {
+  .desktop-only {
+    display: none !important;
+  }
+}
+
+@include small-up {
+  .mobile-only {
+    display: none !important;
+  }
+}

@@ -5,9 +5,9 @@
     </el-header>
     <el-container>
       <el-aside width="auto">
-        <h5 class="heading-blog">My First Blog</h5>
+        <h5 class="heading-blog desktop-only">My First Blog</h5>
         <SideBar />
-        <div class="upgrade-button">
+        <div class="upgrade-button desktop-only">
           <p class="free-account">FREE ACCOUNT</p>
           <el-button plain @click="$router.push('maintenance')">UPGRADE</el-button>
         </div>

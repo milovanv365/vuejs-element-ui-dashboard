@@ -225,6 +225,6 @@ export default {
   overflow: auto;
 }
 .el-col-5 {
-  width: fit-content;
+  /*width: fit-content;*/
 }
 </style>
