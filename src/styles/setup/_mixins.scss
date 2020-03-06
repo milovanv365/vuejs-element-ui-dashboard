@@ -1,0 +1,128 @@
+$c-breakpoints: (
+  "xs": 320px,
+  "small": 480px,
+  "medium": 768px,
+  "large": 960px
+);
+
+@mixin box-shadow($level: 1) {
+  @if $level==1 {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+  @if $level==2 {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+  @if $level==3 {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  }
+  @if $level==4 {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+  @if $level==5 {
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  }
+}
+
+@mixin media-query($media-query) {
+  @if $media-query == xs-down {
+    @media only screen and (max-width: map-get($c-breakpoints, "xs") - 1) {
+      @content;
+    }
+  }
+  @if $media-query == xs-up {
+    @media only screen and (min-width: map-get($c-breakpoints, "xs")) {
+      @content;
+    }
+  }
+  @if $media-query == small-down {
+    @media only screen and (max-width: map-get($c-breakpoints, "small") - 1) {
+      @content;
+    }
+  }
+  @if $media-query == small-up {
+    @media only screen and (min-width: map-get($c-breakpoints, "small")) {
+      @content;
+    }
+  }
+  @if $media-query == medium-down {
+    @media only screen and (max-width: map-get($c-breakpoints, "medium") - 1) {
+      @content;
+    }
+  }
+  @if $media-query == medium-up {
+    @media only screen and (min-width: map-get($c-breakpoints, "medium")) {
+      @content;
+    }
+  }
+  @if $media-query == large-down {
+    @media only screen and (max-width: map-get($c-breakpoints, "large") - 1) {
+      @content;
+    }
+  }
+  @if $media-query == large-up {
+    @media only screen and (min-width: map-get($c-breakpoints, "large")) {
+      @content;
+    }
+  }
+}
+
+@mixin xs-down {
+  @include media-query(xs-down) {
+    @content;
+  }
+}
+
+@mixin xs-up {
+  @include media-query(xs-up) {
+    @content;
+  }
+}
+
+@mixin small-down {
+  @include media-query(small-down) {
+    @content;
+  }
+}
+
+@mixin small-up {
+  @include media-query(small-up) {
+    @content;
+  }
+}
+
+@mixin medium-down {
+  @include media-query(medium-down) {
+    @content;
+  }
+}
+
+@mixin medium-up {
+  @include media-query(medium-up) {
+    @content;
+  }
+}
+
+@mixin large-down {
+  @include media-query(large-down) {
+    @content;
+  }
+}
+
+@mixin large-up {
+  @include media-query(large-up) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @include media-query(retina) {
+    @content;
+  }
+}
+
+@mixin gradient($direction, $list) {
+  background: -webkit-linear-gradient($direction, $list);
+  background: -moz-linear-gradient($direction, $list);
+  background: -o-linear-gradient($direction, $list);
+  background: linear-gradient($direction, $list);
+}

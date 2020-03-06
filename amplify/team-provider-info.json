@@ -1,0 +1,14 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "dashboard-dev-20191202210128-authRole",
+            "UnauthRoleArn": "arn:aws:iam::288943803479:role/dashboard-dev-20191202210128-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::288943803479:role/dashboard-dev-20191202210128-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "dashboard-dev-20191202210128-deployment",
+            "UnauthRoleName": "dashboard-dev-20191202210128-unauthRole",
+            "StackName": "dashboard-dev-20191202210128",
+            "StackId": "arn:aws:cloudformation:us-east-1:288943803479:stack/dashboard-dev-20191202210128/acb45960-1557-11ea-ab9d-0ed5acf75591"
+        }
+    }
+}

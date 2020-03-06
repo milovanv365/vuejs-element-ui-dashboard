@@ -1,0 +1,57 @@
+/* Color
+-------------------------- */
+$--color-primary: $writtio-primary;
+$--color-success: #53e03f;
+$--color-warning: #fecb2f;
+$--color-danger: #fb0d1b;
+
+$--color-info: $writtio-grey-3;
+$--color-text-primary: $writtio-grey-2;
+$--color-text-regular: $writtio-grey-1;
+$--color-text-secondary: #8a8c8e;
+$--color-text-placeholder: #c2c2c2;
+
+$--font-weight-primary: bold;
+$--font-weight-secondary: normal;
+
+$--color-black: #000;
+$--color-white: #fff;
+
+$--disabled-fill-base: rgba($--color-text-placeholder, 0.125);
+$--disabled-color-base: $--color-text-regular;
+
+/* Font
+-------------------------- */
+$--font-path: "~element-ui/lib/theme-chalk/fonts";
+
+/* Input
+-------------------------- */
+$--input-font-size: 11px !important;
+$--input-color: $writtio-grey-2;
+$--input-width: 298px;
+$--input-height: 42px;
+$--input-border: none;
+$--input-border-color: transparent;
+$--input-border-radius: 0px;
+$--input-border-color-hover: transparent;
+$--input-fill-color: #c2c2c2;
+$--input-icon-color: #c2c2c2;
+$--input-placeholder-color: #c2c2c2;
+
+/* Button
+-------------------------- */
+$--button-font-size: 12px;
+$--button-font-weight: bold;
+$--button-border-radius: 0px;
+$--button-padding-vertical: 14px;
+
+$--button-primary-border: transparent;
+$--button-primary-color: white;
+$--button-primary-fill: $writtio-primary;
+
+/* Imports
+-------------------------- */
+@import "~element-ui/packages/theme-chalk/src/index";
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined");
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Oxygen:300,400,700&display=swap");
